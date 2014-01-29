@@ -1,4 +1,4 @@
-Funcionamento basico do NEW_CRM
+#Funcionamento basico do NEW_CRM
 
 o prototipo ja está com o devise para controle de usuarios, pois eu estava fazendo alguns testes com a conexão dependendo do usuario, você pode gerar um usuario para ele ou simplesmente retirar o before_filter :authenticate_usuario! do application controller
 
@@ -45,7 +45,7 @@ dentro da classe tarefa, fiz um method_missing para a execuçao das tarefas so p
 
 a classe Tarefa inclui a classe responsavel pelas conexoes
 
-#include Connection
+--include Connection
 
 a classe Connection possui o metodo 'with_connection' responsavel pelo gerenciamento das conexoes
 
