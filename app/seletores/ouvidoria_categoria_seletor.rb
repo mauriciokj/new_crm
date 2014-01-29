@@ -1,11 +1,11 @@
 
-class CrmCategoriaSeletor < ActiveRecord::Base
+class OuvidoriaCategoriaSeletor < ActiveRecord::Base
 	self.table_name = "categorias"
 	self.abstract_class = true
 	
 
 	def self.seletor
-		CrmCategoriaSeletor.all
+		OuvidoriaCategoriaSeletor.all
 	end
 end
 
