@@ -1,0 +1,37 @@
+<h1>Listing conexoes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th>Adapter</th>
+      <th>Host</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Database</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conexoes.each do |conexao| %>
+      <tr>
+        <td><%= conexao.descricao %></td>
+        <td><%= conexao.adapter %></td>
+        <td><%= conexao.host %></td>
+        <td><%= conexao.username %></td>
+        <td><%= conexao.password %></td>
+        <td><%= conexao.database %></td>
+        <td><%= link_to 'Show', conexao %></td>
+        <td><%= link_to 'Edit', edit_conexao_path(conexao) %></td>
+        <td><%= link_to 'Destroy', conexao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conexao', new_conexao_path %>

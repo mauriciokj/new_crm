@@ -1,0 +1,40 @@
+<%= form_for(@conexao) do |f| %>
+  <% if @conexao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@conexao.errors.count, "error") %> prohibited this conexao from being saved:</h2>
+
+      <ul>
+      <% @conexao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :adapter %><br>
+    <%= f.text_field :adapter %>
+  </div>
+  <div class="field">
+    <%= f.label :host %><br>
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :database %><br>
+    <%= f.text_field :database %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

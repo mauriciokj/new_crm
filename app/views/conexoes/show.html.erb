@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @conexao.descricao %>
+</p>
+
+<p>
+  <strong>Adapter:</strong>
+  <%= @conexao.adapter %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @conexao.host %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @conexao.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @conexao.password %>
+</p>
+
+<p>
+  <strong>Database:</strong>
+  <%= @conexao.database %>
+</p>
+
+<%= link_to 'Edit', edit_conexao_path(@conexao) %> |
+<%= link_to 'Back', conexoes_path %>

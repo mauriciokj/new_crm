@@ -1,0 +1,35 @@
+<h1>Listando tarefas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th>Acao</th>
+      <th>Seletor</th>
+      <th>Conexao</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tarefas.each do |tarefa| %>
+      <tr>
+        <td><%= tarefa.descricao %></td>
+        <td><%= tarefa.acao %></td>
+        <td><%= tarefa.seletor %></td>
+        <td><%= tarefa.conexao.descricao %></td>
+        <td><%= link_to 'Show', tarefa %></td>
+        <td><%= link_to 'Edit', edit_tarefa_path(tarefa) %></td>
+        <td><%= link_to 'Destroy', tarefa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Executar', executar_tarefa_path(tarefa.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tarefa', new_tarefa_path %>
